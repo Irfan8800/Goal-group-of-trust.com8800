@@ -1,37 +1,141 @@
-body {
+/* 🌐 Base Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 🔝 Header */
 header {
   background: #003366;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+/* 🧭 Navigation */
+nav {
+  background: #004080;
+  text-align: center;
+  padding: 1rem;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-.hero, .section {
+/* 🧾 Sections */
+section {
   padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
 }
 
+/* 🖼️ Services Section */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.services img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.services img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Services List */
+#services ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#services li {
+  font-size: 1.1rem;
+  padding: 0.3rem 0;
+}
+
+/* 🖼️ Gallery Section */
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-images img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* 🧑‍🤝‍🧑 Team & Contact */
+#team, #contact {
+  text-align: center;
+}
+
+/* 👣 Footer */
 footer {
   background: #222;
   color: #ccc;
   text-align: center;
   padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .services img,
+  .gallery-images img {
+    width: 90%;
+    height: auto;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
 }
